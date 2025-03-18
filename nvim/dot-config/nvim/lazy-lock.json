@@ -1,7 +1,9 @@
 {
-  "kanagawa.nvim": { "branch": "master", "commit": "cfd67b0e1eeaa04302b8c7eb072253d24bf22d84" },
+  "d2-vim": { "branch": "master", "commit": "981c87dccb63df2887cc41b96e84bf550f736c57" },
+  "kanagawa.nvim": { "branch": "master", "commit": "709018d5af92d2e5780bfb8a6d36e9cad01a6402" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "nvim-treesitter": { "branch": "master", "commit": "d76a8b6e1b67fd3bcffec4a5d45fd9dee4dbbee8" },
+  "nvim-treesitter": { "branch": "master", "commit": "f8aaf5ce4e27cd20de917946b2ae5c968a2c2858" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "smart-splits.nvim": { "branch": "master", "commit": "9996d5f7214e24dcb3e5e0701c2f0259b95bb85c" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" }
 }
