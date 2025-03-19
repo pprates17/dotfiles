@@ -15,6 +15,7 @@ require("config.lazy")
 
 vim.cmd 'colorscheme kanagawa'
 
+vim.keymap.set('i', 'jj', '<Esc>', {})
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
