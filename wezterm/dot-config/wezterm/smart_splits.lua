@@ -1,5 +1,4 @@
 local w = require('wezterm')
-
 local module = {}
 
 local function is_vim(pane)
@@ -33,7 +32,5 @@ local function split_nav(resize_or_move, key)
   }
 end
 
-
 module.split_nav = split_nav
-
 return module
