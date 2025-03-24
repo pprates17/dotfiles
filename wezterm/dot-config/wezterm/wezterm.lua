@@ -3,6 +3,7 @@ local ss = require 'smart_splits'
 local act = wezterm.action
 local config = wezterm.config_builder()
 
+config.enable_wayland = false
 -- Appearance
 config.color_scheme = 'Kanagawa (Gogh)'
 config.hide_tab_bar_if_only_one_tab = true
