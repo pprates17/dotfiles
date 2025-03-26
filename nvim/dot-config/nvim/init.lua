@@ -14,7 +14,7 @@ vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldenable = false
 
 require("config.lazy")
-
+require("config.parsers")
 vim.cmd 'colorscheme kanagawa'
 
 vim.keymap.set('i', 'jj', '<Esc>', {})
