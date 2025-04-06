@@ -1,5 +1,7 @@
 local wezterm = require 'wezterm'
 local ss = require 'smart_splits'
+local session_manager = require 'session-manager'
+
 local act = wezterm.action
 local config = wezterm.config_builder()
 
@@ -10,6 +12,10 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "NONE"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
+    
+wezterm.on("save_session", function(window) session_manager.save_state(window) end)
+wezterm.on("load_session", function(window) session_manager.load_state(window) end)
+wezterm.on("restore_session", function(window) session_manager.restore_state(window) end)
 -- Keybinds
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 
@@ -32,6 +38,8 @@ config.keys = {
     { key = '9', mods = 'CTRL', action = act.ActivateTab(8)},
     { key = 'v', mods = 'LEADER', action = act.ActivateCopyMode},
     { key = 'z', mods = 'LEADER', action = act.TogglePaneZoomState},
+    { key = 'Space', mods = 'LEADER', action = act.RotatePanes 'Clockwise'},
+    { key = '0', mods = 'LEADER', action = act.PaneSelect {mode = 'SwapWithActive'}},
     { key = ',', mods = 'LEADER', action = act.PromptInputLine {
           description = 'Enter new name for tab',
           action = wezterm.action_callback(
@@ -43,7 +51,22 @@ config.keys = {
           ),
         },
     },
-    -- Smart split functions
+    { key = 's', mods = 'LEADER', action = act.SwitchToWorkspace { name = 'default' }},
+    { key = 'u', mods = 'LEADER', action = act.SwitchToWorkspace 
+       {
+           name = 'monitoring',
+           spawn = {
+             args = { 'top' },
+           },
+       },
+   },
+    { key = 'i', mods = 'LEADER', action = act.SwitchToWorkspace },
+    { key = '9', mods = 'ALT',    action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES'}},
+    { key = "y", mods = "LEADER", action = wezterm.action{EmitEvent = "save_session"}},
+    { key = "o", mods = "LEADER", action = wezterm.action{EmitEvent = "load_session"}},
+    { key = "p", mods = "LEADER", action = wezterm.action{EmitEvent = "restore_session"}},
+
+    --Smart split functions
     ss.split_nav('move', 'h'),
     ss.split_nav('move', 'j'), 
     ss.split_nav('move', 'k'),
@@ -52,8 +75,11 @@ config.keys = {
     ss.split_nav('resize', 'j'),
     ss.split_nav('resize', 'k'),
     ss.split_nav('resize', 'l'),
-    
-
 }
+    --local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+    --workspace_switcher.apply_to_config(config)
+    wezterm.on('update-right-status', function(window, pane)
+	window:set_right_status(window:active_workspace())
+    end)
 
 return config
