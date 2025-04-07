@@ -52,14 +52,6 @@ config.keys = {
         },
     },
     { key = 's', mods = 'LEADER', action = act.SwitchToWorkspace { name = 'default' }},
-    { key = 'u', mods = 'LEADER', action = act.SwitchToWorkspace 
-       {
-           name = 'monitoring',
-           spawn = {
-             args = { 'top' },
-           },
-       },
-   },
     { key = 'i', mods = 'LEADER', action = act.SwitchToWorkspace },
     { key = '9', mods = 'ALT',    action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES'}},
     { key = "y", mods = "LEADER", action = wezterm.action{EmitEvent = "save_session"}},
