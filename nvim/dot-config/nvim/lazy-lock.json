@@ -1,7 +1,13 @@
 {
+  "gitsigns.nvim": { "branch": "main", "commit": "140ac646db125904e456e42ab8b538d28f9607d7" },
+  "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
   "kanagawa.nvim": { "branch": "master", "commit": "cc3b68b08e6a0cb6e6bf9944932940091e49bb83" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "nvim-treesitter": { "branch": "master", "commit": "684eeac91ed8e297685a97ef70031d19ac1de25a" },
+  "lualine.nvim": { "branch": "master", "commit": "15884cee63a8c205334ab13ab1c891cd4d27101a" },
+  "mini.icons": { "branch": "main", "commit": "397ed3807e96b59709ef3292f0a3e253d5c1dc0a" },
+  "nvim-treesitter": { "branch": "master", "commit": "4c7509e7b06cea99065e8d4a20d30e6a2e5cd924" },
+  "nvim-web-devicons": { "branch": "master", "commit": "50b5b06bff13a9b4eab946de7c7033649a6618a1" },
+  "oil.nvim": { "branch": "master", "commit": "685cdb4ffa74473d75a1b97451f8654ceeab0f4a" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" }
 }
