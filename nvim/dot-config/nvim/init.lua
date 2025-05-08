@@ -1,7 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.opt.termguicolors=true
 require("config.lazy")
-vim.cmd("colorscheme kanagawa-wave")
+vim.cmd("colorscheme kanagawa-dragon")
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.shiftwidth = 4
