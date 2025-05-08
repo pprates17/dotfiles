@@ -1,0 +1,126 @@
+@define-color	autumn_green  #76946A;
+@define-color	autumn_red #C34043;
+@define-color	autumn_yellow #DCA561;
+@define-color	boat_yellow1  #938056;
+@define-color	boat_yellow2  #C0A36E;
+@define-color	carp_yellow  #DCA561;
+@define-color	cristal_blue #7E9CD8 ;
+@define-color	dragon_blue #658594;
+@define-color	fuji_gray #727169;
+@define-color	fuji_white #DCD7BA;
+@define-color	katana_gray #717C7C;
+@define-color	light_blue #A3D4D5;
+@define-color	old_white #C8C093;
+@define-color	oni_violet #957FB8;
+@define-color	peach_red #FF5D62;
+@define-color	ronin_yellow #FF9E3B;
+@define-color	sakura_pink #D27E99;
+@define-color	samurai_red #E82424;
+@define-color	spring_blue #7FB4CA;
+@define-color	spring_green #98BB6C;
+@define-color	spring_violet1 #938AA9;
+@define-color	spring_violet2 #9CABCA;
+@define-color	sumilink0 #16161D;
+@define-color	sumilink1 #1E1F28;
+@define-color	sumilink2 #2A2A37;
+@define-color	sumilink3 #363646;
+@define-color	sumilink4 #54546D;
+@define-color	surimi_orange #FFA066;
+@define-color	wave_aqua1  #6A9589;
+@define-color	wave_aqua2  #7AA89F;
+@define-color	wave_blue1  #223249;
+@define-color	wave_blue2  #2D4F67;
+@define-color	wave_red  #E46876;
+@define-color	winter_blue #252535;
+@define-color	winter_green  #2B3328;
+@define-color	winter_red #43242B;
+@define-color	winter_yellow #49443C;
+
+* {
+  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-size: 18px;
+}
+
+/* Window */
+window {
+  margin: 0px;
+  padding: 10px;
+  border: 4px solid @boat_yellow1;
+  border-radius: 32px;
+  background-color: @sumilink3;
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 32px;
+  background-color: @sumilink3;
+}
+
+/* Outer Box */
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 32px;
+  background-color: @sumilink3;
+}
+
+/* Scroll */
+#scroll {
+  margin: 0px;
+  padding: 10px;
+  border: 4px solid @boat_yellow1;
+  border-radius: 32px;
+  background-color: @sumilink3;
+}
+
+/* Input */
+#input {
+  margin: 5px 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 1em;
+  color: @sumlink3;
+  background-color: @sumilink3;
+}
+
+#input image {
+    border: none;
+    color: @red;
+}
+
+#input * {
+  outline: 4px solid @red!important;
+}
+
+/* Text */
+#text {
+  margin: 5px;
+  border: none;
+  color: @fuji_white;
+}
+
+#entry {
+  background-color: @sumilink4;
+}
+
+#entry arrow {
+  border: none;
+  color: @old_white;
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 0.11em solid @boat_yellow1;
+}
+
+#entry:selected #text {
+  color: @old_white;
+}
+
+#entry:drop(active) {
+  background-color: @old_white!important;
+}
