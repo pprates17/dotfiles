@@ -1,62 +1,46 @@
-@define-color background-color           #242424;
-@define-color text-color                 #FFFFFF;
-@define-color alternate-background-color #1D1D1D;
-@define-color alterbate-text-color       #FFFFFF;
-@define-color accent-color               #6A9589;
-@define-color alternate-accent-color     #72517A;
+* {
+	font-family: "Hack", monospace;
+}
 
 window {
-    font-family: Roboto;
-    font-size: 1rem;
-
-    margin: 0.5rem;
-    border-radius: 10px;
-    background-color: @accent-color;
+	background-color: #3B4252;
 }
 
 #input {
-    font-size: 1.2rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-
-    margin-bottom: 1rem;
-    background-color: @alternate-background-color;
-    color: @alternate-text-color;
+	margin: 5px;
+	border-radius: 0px;
+	border: none;
+	background-color: #3B4252;
+	color: white;
 }
 
-input:focus, textarea:focus {
-    border: none;
-}
-
-#input, #input * {
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-#input:focus, #input *:focus {
-    outline: 10px;
-    border: 2px @accent-color;
+#inner-box {
+	background-color: #383C4A;
 }
 
 #outer-box {
-    margin: 0.5rem;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: @background-color;
+	margin: 2px;
+	padding: 10px;
+	background-color: #383C4A;
 }
-    
+
+#scroll {
+	margin: 5px;
+}
+
 #text {
-    padding: 0.5rem;
-    color: @text-color;
+	padding: 4px;
+	color: white;
+}
+
+#entry:nth-child(even){
+	background-color: #404552;
 }
 
 #entry:selected {
-    background-color: @accent-color;
-    color: @text-color;
-    border: 0px;
-    border-radius: 10px;
-    outline: 0px;
+	background-color: #4C566A;
+}
+
+#text:selected {
+	background: transparent;
 }
