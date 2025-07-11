@@ -28,6 +28,7 @@ networkmanager 1.52.0-1
 nvidia 575.64.03-2
 openssh 10.0p1-3
 os-prober 1.83-1
+otf-ipafont 003.03-9
 pipewire 1:1.4.6-1
 pipewire-alsa 1:1.4.6-1
 pipewire-audio 1:1.4.6-1
@@ -44,3 +45,5 @@ ttf-font-awesome 6.7.2-1
 waybar 0.13.0-3
 wireplumber 0.5.10-1
 yay 12.5.0-1
+zoxide 0.9.8-2
+zsh 5.9-5
