@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto-connect Bluetooth headset at login
+After=default.target bluetooth.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/bt-auto-connect.sh
+
+[Install]
+WantedBy=default.target
