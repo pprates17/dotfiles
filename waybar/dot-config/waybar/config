@@ -4,33 +4,38 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+	"custom/logo",
+        "tray",
     ],
     "modules-center": [
-        "clock",
+        "hyprland/workspaces",
     ],
     "modules-right": [
         //"mpd",
         "idle_inhibitor",
-        "network",
+        "cpu",
+        "memory",
 	"bluetooth",
+        "pulseaudio",
+        "network",
         "power-profiles-daemon",
-        //"cpu",
-        //"memory",
-        //"temperature",
+        "temperature",
         "backlight",
         "keyboard-state",
-        "pulseaudio",
         "hyprland/language",
         "battery",
         "battery#bat2",
-        "tray",
-        "custom/power"
+        "clock",
+        "custom/power",
     ],
     // Modules configuration
+    "custom/logo": {
+	"format": "",
+	"tooltip": false
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -126,7 +131,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{used}/{total} Gb"
     },
     "temperature": {
         // "thermal-zone": 2,

@@ -4,7 +4,7 @@
 #General
 theme = nord
 background-opacity = 0.95
-font-family="Fira Code"
+font-family = "FiraCode Nerd Font"
 
 #Keybinds
 #keybind = ctrl+t=new_tab
