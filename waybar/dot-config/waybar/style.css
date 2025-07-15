@@ -1,21 +1,21 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: Roboto Mono SemiBold, Iosevka Nerd Font;
+    font-family: Roboto Mono SemiBold, Firacode Nerd Font;
     font-size: 12px;
     font-style: normal;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(76,86,106,1.0);
+    background: #2E3440;
     color: #cdd6f4
 }
 
 #workspaces {
     background: #4C566A;
     margin: 5px 5px;
-    padding: 8px 5px;
+    padding: 5px 5px;
     border-radius: 8px;
     border: solid 0px #cdd6f4;
     font-weight: normal;
@@ -56,6 +56,13 @@ window#waybar {
 #cava,
 #language,
 #windows,
+#custom-logo,
+
+#custom-logo{
+    color: #1793d1;
+    padding-right: 7px;
+    padding-left: 7px;
+}
 
 #cava{
     background-color: #2e3440;
@@ -91,31 +98,28 @@ window#waybar {
     color: #cdd6f4;
     background-color: #4C566A;
     border-radius: 8px 8px 8px 8px;
-    padding-left: 13px;
-    padding-right: 15px;
-    margin-right: 0px;
-    margin-left: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px 5px 5px 5px;
     font-weight: bold;
-    /*border-left: solid 1px #282738;*/
 }
 
 #network {
     color: #cdd6f4;
+    background-color: #4C566A;
     border-radius: 8px;
-    margin-right: 5px;
+    margin: 5px 5px 5px 5px;
     font-weight: bold;
 }
 
 #pulseaudio {
     color: #5e81ac;
     background: #2e3440;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0px 10px 0px 5px;
     font-weight: bold;
 }
 
@@ -176,23 +180,19 @@ window#waybar {
 }
 
 #cpu {
-    background-color: #2e3440;
+    background-color: #4C566A;
     color: #bf616a;
-    border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    border-radius: 8px;
+    margin: 5px 0px 5px 1px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
 #memory {
-    background-color: #2e3440;
+    background-color: #4C566A;
     color: #b48ead;
-    border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    border-radius: 8px;
+    margin: 5px 1px 5px 0px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
@@ -211,7 +211,7 @@ window#waybar {
 #language {
     background-color: #2e3440;
     color: #a3be8c;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -233,7 +233,7 @@ window#waybar {
 #bluetooth {
     background-color: #2e3440;
     color: #a3be8c;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;

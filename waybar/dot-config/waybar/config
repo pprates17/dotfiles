@@ -8,10 +8,11 @@
     // Choose the order of the modules
     "modules-left": [
 	"custom/logo",
+        "hyprland/workspaces",
         "tray",
     ],
     "modules-center": [
-        "hyprland/workspaces",
+        "clock",
     ],
     "modules-right": [
         //"mpd",
@@ -22,13 +23,12 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "temperature",
+        //"temperature",
         "backlight",
         "keyboard-state",
         "hyprland/language",
         "battery",
         "battery#bat2",
-        "clock",
         "custom/power",
     ],
     // Modules configuration
@@ -114,6 +114,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+	"format": "{:%a %d %b %H:%M}",
+	"interval" : 60,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%Y-%m-%d}",
 	"calendar": {
@@ -131,7 +133,9 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{used}/{total} Gb"
+        "format": "{percentage}% ",
+        "tooltip": true,
+	"tooltip-format": "{used}/{total}GiB"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -178,15 +182,15 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-ethernet": "",
+        "tooltip-format": "{ipaddr}/{cidr}\n{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -201,7 +205,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",

@@ -10,6 +10,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+export EDITOR=nvim
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
