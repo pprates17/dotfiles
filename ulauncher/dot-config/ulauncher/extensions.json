@@ -1,0 +1,16 @@
+{
+    "com.github.mikebarkmin.ulauncher-duckduckgo": {
+        "id": "com.github.mikebarkmin.ulauncher-duckduckgo",
+        "url": "https://github.com/mikebarkmin/ulauncher-duckduckgo",
+        "updated_at": "2025-07-15T12:43:19.482352",
+        "last_commit": "f2ea6a187082c600a59acc9cca6e288d96f66cc0",
+        "last_commit_time": "2021-08-07T18:51:44"
+    },
+    "com.github.iboyperson.ulauncher-system": {
+        "id": "com.github.iboyperson.ulauncher-system",
+        "url": "https://github.com/iboyperson/ulauncher-system",
+        "updated_at": "2025-07-15T12:44:15.806635",
+        "last_commit": "7dedd992709fa2297735cddf852404144d4da47c",
+        "last_commit_time": "2023-11-14T16:53:20"
+    }
+}
