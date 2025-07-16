@@ -56,6 +56,13 @@ window#waybar {
 #cava,
 #language,
 #windows,
+#custom-logo,
+
+#custom-logo{
+    color: #1793d1;
+    padding-right: 7px;
+    padding-left: 7px;
+}
 
 #cava{
     background-color: #2e3440;
@@ -103,6 +110,7 @@ window#waybar {
 
 #network {
     color: #cdd6f4;
+    background-color: #4C566A;
     border-radius: 8px;
     margin-right: 5px;
     font-weight: bold;
@@ -111,7 +119,7 @@ window#waybar {
 #pulseaudio {
     color: #5e81ac;
     background: #2e3440;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -178,7 +186,7 @@ window#waybar {
 #cpu {
     background-color: #2e3440;
     color: #bf616a;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -189,7 +197,7 @@ window#waybar {
 #memory {
     background-color: #2e3440;
     color: #b48ead;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -211,7 +219,7 @@ window#waybar {
 #language {
     background-color: #2e3440;
     color: #a3be8c;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -233,7 +241,7 @@ window#waybar {
 #bluetooth {
     background-color: #2e3440;
     color: #a3be8c;
-    border-radius: 16px;
+    border-radius: 8px;
     margin: 5px;
     margin-left: 5px;
     margin-right: 5px;
