@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.termguicolors=true
 require("config.lazy")
+require("config.lsp")
 vim.cmd[[colorscheme nord]]
 --vim.cmd("colorscheme kanagawa-dragon")
 vim.wo.relativenumber = true
@@ -16,7 +17,11 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldenable = false
 
---vim.keymap.set('n', '<C-h>', '<C-w>h')
---vim.keymap.set('n', '<C-j>', '<C-w>j')
---vim.keymap.set('n', '<C-k>', '<C-w>k')
---vim.keymap.set('n', '<C-l>', '<C-w>l')
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
+})
