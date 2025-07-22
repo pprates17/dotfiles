@@ -46,6 +46,6 @@ configuration entries.
 
 (defalias
   cap (tap-hold-press 200 200 esc lctl)
-  grv (tap-hold-press 200 200 grv (layer-toggle arrows))
-  ralt (tap-hold-press 200 200 ralt lmet)
+  grv (tap-hold-press 201 200 grv (layer-toggle arrows))
+  ralt (tap-hold-release 350 350 ralt lmet)
 )
