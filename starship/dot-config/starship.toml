@@ -30,16 +30,16 @@ $line_break$character"""
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
-color_fg0 = '#ffffff'
-color_bg1 = '#3d5470'
-color_bg3 = '#4a6287'
-color_blue = '#6d8f8e'
-color_aqua = '#638d99'
-color_green = '#98971a'
-color_orange = '#3d5470'
-color_purple = '#b16286'
-color_red = '#cc241d'
-color_yellow = '#556a80'
+color_fg0   = '#DCD7BA'  # fujiWhite
+color_bg1   = '#1F1F28'  # sumiInk3
+color_bg3   = '#2A2A37'  # sumiInk4
+color_blue  = '#7E9CD8'  # crystalBlue
+color_aqua  = '#7AA89F'  # waveAqua2
+color_green = '#98BB6C'  # springGreen
+color_orange = '#FFA066' # surimiOrange
+color_purple = '#957FB8' # oniViolet
+color_red    = '#E46876' # waveRed
+color_yellow = '#DCA561' # autumnYellow
 
 [os]
 disabled = false

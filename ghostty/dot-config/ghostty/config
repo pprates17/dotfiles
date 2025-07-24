@@ -2,7 +2,7 @@
 # all available config options and their default values.
 
 #General
-theme = nord
+theme = Kanagawa Wave
 background-opacity = 0.95
 font-family = "FiraCode Nerd Font"
 

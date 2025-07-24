@@ -1,0 +1,61 @@
+# Kanagawa-inspired Starship Prompt
+# Example (Starship doesn't support variables like CSS, so write the hex directly if needed)
+fujiWhite    = "#DCD7BA"
+waveBlue1    = "#223249"
+crystalBlue  = "#7E9CD8"
+autumnGreen  = "#76946A"
+sakuraPink   = "#D27E99"
+waveRed      = "#E46876"
+springGreen  = "#98BB6C"
+oldWhite     = "#C8C093"
+
+format = """
+[┌─](bold $style)[](fg:waveBlue1 bg:none)$directory$git_branch$git_status$nodejs$rust$python
+[└─>](bold $style) """
+
+add_newline = false
+
+[directory]
+style = "fg:fujiWhite bg:waveBlue1"
+format = "[ $path ]($style)[](fg:waveBlue1 bg:none)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "fg:crystalBlue bg:waveBlue1"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "fg:autumnYellow bg:waveBlue1"
+format = "[($all_status$ahead_behind )]($style)"
+
+[nodejs]
+symbol = ""
+style = "fg:autumnGreen bg:waveBlue1"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "fg:sakuraPink bg:waveBlue1"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = ""
+style = "fg:waveRed bg:waveBlue1"
+format = "[ $symbol ($version) ]($style)"
+
+[username]
+style_user = "fg:oldWhite"
+format = "[$user]($style) "
+
+[hostname]
+style = "fg:oldWhite"
+format = "[@$hostname]($style) "
+
+[character]
+success_symbol = "[➜](bold springGreen)"
+error_symbol = "[✗](bold waveRed)"
+
+[env_var.STYLE]
+default = "sumiInk0"
