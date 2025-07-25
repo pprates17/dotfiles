@@ -1,189 +1,106 @@
-@import "kanagawa.css";
-
+/* Base Reset */
 * {
     border: none;
-    border-radius: 0px;
+    border-radius: 4px;
     font-family: Roboto Mono SemiBold, Firacode Nerd Font;
-    font-size: 12px;
-    font-style: normal;
+    font-size: 14px;
     min-height: 0;
 }
 
-window#waybar {
-    background: #1F1F28; /* sumiInk0 */
-    color: #DCD7BA;      /* fujiWhite */
+/* Tooltip */
+tooltip {
+    background: #223249; /* waveBlue1 */
+    border-radius: 8px;
+    opacity: 0.95;
+}
+tooltip label {
+    font-size: 12px;
+    color: #DCD7BA; /* fujiWhite */
 }
 
+/* Bar Base */
+window#waybar {
+    background: #1F1F28; /* sumiInk3 */
+    color: #DCD7BA;      /* fujiWhite */
+    border: 2px solid #DCD7BA;
+}
+
+/* Workspaces */
 #workspaces {
-    background: #2A2A37; /* sumiInk1 */
+    background: #2A2A37; /* sumiInk4 */
     margin: 5px;
     padding: 5px;
     border-radius: 8px;
-    font-weight: normal;
 }
-
 #workspaces button {
     padding: 0 5px;
     margin: 0 3px;
     border-radius: 16px;
     color: #C8C093;           /* oldWhite */
-    background-color: #223249; /* waveBlue1 */
     transition: all 0.3s ease-in-out;
 }
-#workspaces button.active {
-    color: #223249;
-    background-color: #DCD7BA;
-    border-radius: 16px;
-    min-width: 50px;
-}
+#workspaces button.active,
 #workspaces button:hover {
-	background-color: #DCD7BA;
-	color: #223249;
-	border-radius: 16px;
-    min-width: 50px;
+    background-color: #C8C093;
+    color: #223249;          /* waveBlue1 */
+    border-radius: 4px;
 }
 
-#clock, 
-#pulseaudio, 
-#network, 
-#custom-launcher, 
-#custom-pacmanAlt,
-#cpu,
-#memory,
-#disk,
-#cava,
-#language,
-#windows,
-#custom-logo,
-#battery,
-#bluetooth {
-    color: #DCD7BA;
-}
-
-#clock {
-    background-color: #223249; /* waveBlue1 */
+/* Shared Module Styling */
+#clock, #pulseaudio, #network, #cpu, #memory, #disk,
+#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
     border-radius: 8px;
-    padding: 0 10px;
     margin: 5px;
+    padding: 0 10px;
     font-weight: bold;
+}
+
+/* Individual Modules */
+#clock {
 }
 
 #network {
-    background-color: #223249;
-    color: #7E9CD8; /* crystalBlue */
-    border-radius: 8px;
-    margin: 5px;
-    font-weight: bold;
 }
 
 #pulseaudio {
-    background-color: #2A2A37;
-    color: #7FB4CA; /* waveAqua1 */
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
 }
 
 #cpu {
-    background-color: #223249;
-    color: #E46876; /* waveRed */
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
 }
 
 #memory {
-    background-color: #223249;
-    color: #957FB8; /* oniViolet */
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
 }
 
 #disk {
-    background-color: #2A2A37;
-    color: #FF5D62; /* peachRed */
     border-radius: 16px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
 }
 
-#language {
-    background-color: #2A2A37;
-    color: #98BB6C; /* springGreen */
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
+#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
 }
 
-#battery {
-    background-color: #2A2A37;
-    color: #98BB6C;
-    border-radius: 16px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
-}
-
-#bluetooth {
-    background-color: #2A2A37;
-    color: #98BB6C;
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
-}
-
+/* Launcher */
 #custom-launcher {
-    background-color: #1F1F28;
     color: #DCD7BA;
     padding: 0 20px;
     font-size: 20px;
 }
 
-#custom-playerctl {
-    background-color: #1F1F28;
-    padding: 0 10px;
-    border-radius: 16px;
-    margin: 5px;
-}
-
-#custom-playerlabel {
-    background: transparent;
-    padding: 0 10px;
-    border-radius: 16px;
-    margin: 5px;
-}
-
-#window {
+/* Player + Window */
+#custom-playerctl, #custom-playerlabel, #window {
     background: #1F1F28;
-    padding: 0 15px;
+    padding: 0 10px;
     border-radius: 16px;
     margin: 5px;
 }
 
+/* Logo */
 #custom-logo {
     color: #7E9CD8; /* crystalBlue */
     padding: 0 7px;
 }
 
-#custom-pacmanAlt,
-#cava {
-    background-color: #2A2A37;
-    color: #98BB6C;
-    border-radius: 16px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
-}
-
+/* Tray */
 #tray {
-    background-color: #1F1F28;
     margin: 5px;
     border-radius: 16px;
     padding: 0 12px;

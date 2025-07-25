@@ -1,10 +1,10 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
+    "margin": "8,8,2,2",
     // "width": 1280, // Waybar width
-    "spacing": 2, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
@@ -41,15 +41,15 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{name}:{icon}",
         "format-icons": {
-           // "1": "",
-           // "2": "",
-           // "3": "",
-           // "4": "",
-           // "5": "",
+	    "1":"󰊠",
+            "2":"󰈹",
+            "3":"",
+            "4":"",
+            "5":"",
             "urgent": "",
-            "active": "",
+            //"active": "",
             "default": ""
         }
     },
@@ -122,6 +122,13 @@
 	"calendar": {
 	    "mode" : "year",
 	    "mode-mon-col"  : 3,
+	     "format": {
+		    "months":    "<span color='#C0A36E'><b>{}</b></span>",     // boatYellow2
+  		    "days":      "<span color='#DCD7BA'><b>{}</b></span>",     // sakuraPink
+  		    "weeks":     "<span color='#7AA89F'><b>W{}</b></span>",    // waveAqua2
+  		    "weekdays":  "<span color='#E6C384'><b>{}</b></span>",     // carpYellow
+  		    "today":     "<span color='#98BB6C'><b><u>{}</u></b></span>" // waveRed
+	    }                   
 	},
 	"actions": {
 	    "on-click-right": "mode",
