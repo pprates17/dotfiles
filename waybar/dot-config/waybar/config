@@ -42,10 +42,10 @@
         "warp-on-scroll": false,
         "format": "{name}:{icon}",
         "format-icons": {
-	    "1":"󰊠",
+	    "1":"",
             "2":"󰈹",
             "7":"",
-            "8":"",
+            "8":"",
             "urgent": "",
             //"active": "",
             "default": ""
