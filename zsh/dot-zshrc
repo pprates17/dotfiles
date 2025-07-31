@@ -27,6 +27,7 @@ zinit cdreplay -q
 
 # keybindings
 bindkey -e
+#bindkey -v
 #bindkey '^i' history-search-backward
 #bindkey '^o' history-search-forward
 

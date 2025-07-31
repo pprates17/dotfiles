@@ -1,242 +1,116 @@
+/* Base Reset */
 * {
     border: none;
-    border-radius: 0px;
+    border-radius: 8px;
     font-family: Roboto Mono SemiBold, Firacode Nerd Font;
-    font-size: 12px;
-    font-style: normal;
+    font-size: 14px;
     min-height: 0;
 }
 
-window#waybar {
-    background: #2E3440;
-    color: #cdd6f4
+/* Tooltip */
+tooltip {
+    background: #223249; /* waveBlue1 */
+    border-radius: 8px;
+    opacity: 0.95;
+}
+tooltip label {
+    font-size: 12px;
+    color: #DCD7BA; /* fujiWhite */
 }
 
+/* Bar Base */
+window#waybar {
+    background: #1F1F28; /* sumiInk3 */
+    color: #DCD7BA;      /* fujiWhite */
+    border: 2px solid #DCD7BA;
+}
+
+/* Workspaces */
 #workspaces {
-    background: #4C566A;
-    margin: 5px 5px;
-    padding: 5px 5px;
+    background: #2A2A37; /* sumiInk4 */
+    margin: 5px;
+    padding: 5px;
     border-radius: 8px;
-    border: solid 0px #cdd6f4;
-    font-weight: normal;
-    font-style: normal;
 }
 #workspaces button {
-    padding: 0px 5px;
-    margin: 0px 3px;
+    padding: 0 5px;
+    margin: 0 3px;
     border-radius: 16px;
-    color: #d8dee9;
-    background-color: #6f7787;
+    color: #C8C093;           /* oldWhite */
     transition: all 0.3s ease-in-out;
 }
-#workspaces button.active {
-    color: #6f7787;
-    background-color: #cdd6f4;
-    border-radius: 16px;
-    min-width: 50px;
-    background-size: 400% 400%;
-    transition: all 0.3s ease-in-out;
-}
+#workspaces button.active,
 #workspaces button:hover {
-	background-color: #cdd6f4;
-	color: #cdd6f4;
-	border-radius: 16px;
-  min-width: 50px;
-  background-size: 400% 400%;
+    background-color: #C8C093;
+    color: #223249;          /* waveBlue1 */
+    border-radius: 4px;
 }
 
-#clock, 
-#pulseaudio, 
-#network, 
-#custom-launcher, 
-#custom-pacmanAlt,
-#cpu,
-#memory,
-#disk,
-#cava,
-#language,
-#windows,
-#custom-logo,
-
-#custom-logo{
-    color: #1793d1;
-    padding-right: 7px;
-    padding-left: 7px;
+#workspaces button.urgent {
+  color: #C34043; /* foreground color (text/icon) */
+  background-color: #C8C093;
 }
 
-#cava{
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 16px;
+/* Shared Module Styling */
+#clock, #pulseaudio, #network, #cpu, #memory, #disk,
+#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
+    border-radius: 8px;
     margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;      
-}
-
-#custom-pacmanAlt{
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;      
-}
-
-#tray {
-    background: #2e3440;
-    margin: 5px 5px 5px 5px;
-    border-radius: 16px;
-    padding: 0px 12px;
-    /*border-right: solid 1px #282738;*/
-}
-
-#clock {
-    color: #cdd6f4;
-    background-color: #4C566A;
-    border-radius: 8px 8px 8px 8px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 5px 5px 5px 5px;
+    padding: 0 10px;
     font-weight: bold;
+}
+
+/* Individual Modules */
+#clock {
 }
 
 #network {
-    color: #cdd6f4;
-    background-color: #4C566A;
-    border-radius: 8px;
-    margin: 5px 5px 5px 5px;
-    font-weight: bold;
 }
 
 #pulseaudio {
-    color: #5e81ac;
-    background: #2e3440;
-    border-radius: 8px;
-    margin: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 0px 10px 0px 5px;
-    font-weight: bold;
-}
-
-#custom-launcher {
-    color: #cdd6f4;
-    background-color: #2e3440;
-    border-radius: 0px 24px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    padding: 0 20px 0 13px;
-    /*border-right: solid 1px #282738;*/
-    font-size: 20px;
-}
-
-#custom-launcher button:hover {
-    background-color: #FB4934;
-    color: transparent;
-    border-radius: 8px;
-    margin-right: -5px;
-    margin-left: 10px;
-}
-
-#custom-playerctl {
-	background: #2e3440;
-    padding: 0px 5px 0px 10px;
-	border-radius: 16px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin: 5px 7px;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16px;
-}
-
-#custom-playerlabel {
-    background: transparent;
-    padding-left: 10px;
-    padding-right: 5px;
-    border-radius: 16px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-style: normal;
-}
-
-#window {
-    background: #2e3440;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 16px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-style: normal;
 }
 
 #cpu {
-    background-color: #4C566A;
-    color: #bf616a;
-    border-radius: 8px;
-    margin: 5px 0px 5px 1px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
 }
 
 #memory {
-    background-color: #4C566A;
-    color: #b48ead;
-    border-radius: 8px;
-    margin: 5px 1px 5px 0px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
 }
 
 #disk {
-    background-color: #2e3440;
-    color: #d08770;
+    border-radius: 16px;
+}
+
+#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
+}
+
+/* Launcher */
+#custom-launcher {
+    color: #DCD7BA;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+/* Player + Window */
+#custom-playerctl, #custom-playerlabel, #window {
+    background: #1F1F28;
+    padding: 0 10px;
     border-radius: 16px;
     margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
 }
 
-#language {
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 8px;
+/* Logo */
+#custom-logo {
+    color: #7E9CD8; /* crystalBlue */
+    padding: 0 7px;
+}
+
+/* Tray */
+#tray {
     margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-
-#battery {
-    background-color: #2e3440;
-    color: #a3be8c;
     border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+    padding: 0 12px;
 }
 
-#bluetooth {
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 8px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+#idle_inhibitor {
+    margin: 8px;
 }
