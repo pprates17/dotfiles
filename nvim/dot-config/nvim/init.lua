@@ -16,15 +16,6 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldenable = false
 
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
-  end,
-})
-
 -- resizing splits
 -- these keymaps will also accept a range,
 -- for example `10<A-h>` will `resize_left` by `(10 * config.default_amount)`
@@ -43,3 +34,14 @@ vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
 vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
 vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
 vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
+vim.g.smart_splits_debug_mode = true
+
+-- LSP config
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
+})

@@ -13,10 +13,10 @@ keybind = ctrl+a>|=new_split:left
 keybind = ctrl+a>-=new_split:down
 
 #Move between splits
-keybind = ctrl+a>k=goto_split:up
-keybind = ctrl+a>j=goto_split:down
-keybind = ctrl+a>l=goto_split:right
-keybind = ctrl+a>h=goto_split:left
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+h=goto_split:left
 
 #Resize splits
 keybind = ctrl+a>alt+k=resize_split:up,40
