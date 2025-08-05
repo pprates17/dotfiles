@@ -7,7 +7,7 @@ return {
 	    diagnostics = {
 		globals = {
 		    "vim"
-		}	
+		}
 	    }
 	}
     }
