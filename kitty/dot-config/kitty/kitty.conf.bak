@@ -1,0 +1,31 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+font_family      FiraCode
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+font_size 11.0
+
+disable_ligatures cursor
+
+hide_window_decorations yes
+
+tab_bar_style powerline
+tab_powerline_style round
+
+editor nvim
+
+map kitty_mod+l move_window_forward
+map kitty_mod+h move_window_backward
+map kitty_mod+k move_window_to_top
+map ctrl+- launch --location=hsplit
+map ctrl+| launch --location=vsplit
+
+map ctrl+enter new_window
+map ctrl+w close_window
+
+map ctrl+n next_tab
+map ctrl+p previous_tab
+map ctrl+t new_tab
+map ctrl+w close_tab

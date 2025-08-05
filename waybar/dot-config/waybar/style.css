@@ -25,7 +25,12 @@ window#waybar {
     border: 2px solid #DCD7BA;
 }
 
-/* Workspaces */
+#custom-logo {
+    color: #7E9CD8; /* crystalBlue */
+    padding: 0 10px;
+    margin: 0px;	
+}
+
 #workspaces {
     background: #2A2A37; /* sumiInk4 */
     margin: 5px;
@@ -33,7 +38,7 @@ window#waybar {
     border-radius: 8px;
 }
 #workspaces button {
-    padding: 0 5px;
+    padding: 1 10px;
     margin: 0 3px;
     border-radius: 16px;
     color: #C8C093;           /* oldWhite */
@@ -96,12 +101,6 @@ window#waybar {
     padding: 0 10px;
     border-radius: 16px;
     margin: 5px;
-}
-
-/* Logo */
-#custom-logo {
-    color: #7E9CD8; /* crystalBlue */
-    padding: 0 7px;
 }
 
 /* Tray */
