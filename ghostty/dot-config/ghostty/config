@@ -3,8 +3,11 @@
 
 #General
 theme = Kanagawa Wave
-background-opacity = 0.95
+background-opacity = 1
 font-family = "FiraCode Nerd Font"
+gtk-custom-css = tab-style.css
+window-save-state = always
+gtk-wide-tabs = false
 
 #Keybinds
 keybind = ctrl+a>t=new_tab
@@ -30,3 +33,4 @@ keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
 
 keybind = ctrl+a>d=toggle_window_decorations
+gtk-tabs-location = bottom

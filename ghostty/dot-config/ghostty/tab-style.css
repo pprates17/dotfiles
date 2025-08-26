@@ -1,0 +1,30 @@
+headerbar {
+  margin: -8px;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+headerbar button {
+  min-height: 8px;
+  min-width: 8px;
+}
+
+tabbar {
+  margin-top: -24px;
+  margin-bottom: -24px;
+}
+
+tabbar tabbox {
+  transform: translateY(-12px);
+  background-color: #1a1a1a;
+  font-family: monospace;
+}
+
+tabbar tabbox tab:selected{
+  background-color: #4a1a1a;
+}
+
+tabbar tabbox button {
+  min-height: 15px;
+  min-width: 15px;
+}
