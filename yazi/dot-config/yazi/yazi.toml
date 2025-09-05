@@ -83,13 +83,12 @@ micro_workers    = 10
 macro_workers    = 10
 bizarre_retry    = 3
 image_alloc      = 536870912  # 512MB
-image_bound      = [ 5000, 5000 ]
+image_bound      = [ 0, 0 ]
 suppress_preload = false
 
 [plugin]
 fetchers = [
-	# Mimetype
-	{ id = "mime", name = "*", run = "mime", prio = "high" },
+    { id = "mime", name = "*", run = "mime", prio = "high" },
 ]
 spotters = [
 	{ name = "*/", run = "folder" },
@@ -126,6 +125,7 @@ previewers = [
 	# JSON
 	{ mime = "application/{json,ndjson}", run = "json" },
 	# Image
+	{ mime = "image/{tiff,x-tiff}", run = "magick" },
 	{ mime = "image/{avif,hei?,jxl}", run = "magick" },
 	{ mime = "image/svg+xml", run = "svg" },
 	{ mime = "image/*", run = "image" },
