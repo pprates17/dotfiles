@@ -1,115 +1,124 @@
-/* Base Reset */
-* {
-    border: none;
-    border-radius: 8px;
-    font-family: Roboto Mono SemiBold, Firacode Nerd Font;
-    font-size: 14px;
-    min-height: 0;
+#waybar {
+    font-family: "SF Pro Display", Cantarell, Noto Sans, sans-serif;
+    font-size: 16px;
 }
 
-/* Tooltip */
-tooltip {
-    background: #223249; /* waveBlue1 */
-    border-radius: 8px;
-    opacity: 0.95;
-}
-tooltip label {
-    font-size: 12px;
-    color: #DCD7BA; /* fujiWhite */
-}
-
-/* Bar Base */
-window#waybar {
-    background: #1F1F28; /* sumiInk3 */
-    color: #DCD7BA;      /* fujiWhite */
-    border: 2px solid #DCD7BA;
-}
-
-#custom-logo {
-    color: #7E9CD8; /* crystalBlue */
+#window {
     padding: 0 10px;
-    margin: 0px;	
 }
+
+window#waybar {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
+    color: rgba(217, 216, 216, 1);
+    background: #1a1b26; 
+} 
 
 #workspaces {
-    background: #2A2A37; /* sumiInk4 */
-    margin: 5px;
-    padding: 5px;
-    border-radius: 8px;
+    margin: 0 5px;
 }
+
 #workspaces button {
-    padding: 1 10px;
-    margin: 0 3px;
-    border-radius: 16px;
-    color: #C8C093;           /* oldWhite */
-    transition: all 0.3s ease-in-out;
+    padding: 0 8px;
+    color: #565f89;
+    border: 3px solid rgba(9, 85, 225, 0);
+    border-radius: 10px;
+    min-width: 33px;
 }
-#workspaces button.active,
-#workspaces button:hover {
-    background-color: #C8C093;
-    color: #223249;          /* waveBlue1 */
-    border-radius: 4px;
+
+#workspaces button.visible {
+    color: #a9b1d6;
+}
+
+#workspaces button.focused {
+    border-top: 3px solid #7aa2f7;
+    border-bottom: 3px solid #7aa2f7;
 }
 
 #workspaces button.urgent {
-  color: #C34043; /* foreground color (text/icon) */
-  background-color: #C8C093;
+    background-color: #a96d1f;
+    color: white;
 }
 
-/* Shared Module Styling */
-#clock, #pulseaudio, #network, #cpu, #memory, #disk,
-#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
-    border-radius: 8px;
-    margin: 5px;
-    padding: 0 10px;
-    font-weight: bold;
+#workspaces button:hover {
+    box-shadow: inherit;
+    border-color: #bb9af7;
+    color: #bb9af7;
 }
 
-/* Individual Modules */
-#clock {
-}
+/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
-#network {
+#workspaces button.focused {
+    color: #7aa2f7;
+}
+#workspaces button.focused:hover {
+    color: #bb9af7;
 }
 
 #pulseaudio {
+    /* font-size: 26px; */
 }
 
-#cpu {
+#custom-recorder {
+	font-size: 18px;
+	margin: 2px 7px 0px 7px;
+	color:#ee2e24;
 }
 
-#memory {
+#tray,
+#mode,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#sway-language,
+#backlight,
+#custom-storage,
+#custom-cpu_speed,
+#custom-powermenu,
+#custom-spotify,
+#custom-weather,
+#custom-mail,
+#custom-media {
+    margin: 0px 0px 0px 10px;
+    padding: 0 5px;
+    /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
 }
 
-#disk {
-    border-radius: 16px;
+/* #clock {
+    margin:     0px 16px 0px 10px;
+    min-width:  140px;
+} */
+
+#battery.warning {
+    color: rgba(255, 210, 4, 1);
 }
 
-#language, #battery, #bluetooth, #cava, #custom-pacmanAlt {
+#battery.critical {
+    color: rgba(238, 46, 36, 1);
 }
 
-/* Launcher */
-#custom-launcher {
-    color: #DCD7BA;
-    padding: 0 20px;
-    font-size: 20px;
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
 }
 
-/* Player + Window */
-#custom-playerctl, #custom-playerlabel, #window {
-    background: #1F1F28;
-    padding: 0 10px;
-    border-radius: 16px;
-    margin: 5px;
+#custom-storage.warning {
+    color: rgba(255, 210, 4, 1);
 }
 
-/* Tray */
-#tray {
-    margin: 5px;
-    border-radius: 16px;
-    padding: 0 12px;
+#custom-storage.critical {
+    color: rgba(238, 46, 36, 1);
 }
 
-#idle_inhibitor {
-    margin: 8px;
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
 }

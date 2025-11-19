@@ -2,7 +2,7 @@
 # all available config options and their default values.
 
 #General
-theme = Kanagawa Wave
+theme = TokyoNight
 background-opacity = 1
 font-family = "FiraCode Nerd Font"
 gtk-custom-css = tab-style.css

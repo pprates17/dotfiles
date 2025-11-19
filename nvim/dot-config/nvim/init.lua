@@ -3,7 +3,7 @@ vim.g.maplocalleader = ' '
 vim.opt.termguicolors=true
 require("config.lazy")
 require("config.lsp")
-vim.cmd[[colorscheme kanagawa-wave]]
+vim.cmd[[colorscheme tokyonight]]
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.shiftwidth = 4

@@ -1,237 +1,128 @@
-// -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "margin": "10 15 0 15",
-    "reload_style_on_change": true,
-    // Choose the order of the modules
-    "modules-left": [
-	"custom/logo",
-        "hyprland/workspaces",
-        "tray",
-    ],
-    "modules-center": [
-        "clock",
-    ],
-    "modules-right": [
-        //"mpd",
-        "idle_inhibitor",
-        "cpu",
-        "memory",
-	"bluetooth",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        //"temperature",
-        "backlight",
-        "keyboard-state",
-        "hyprland/language",
-        "battery",
-        "custom/power",
-    ],
-    // Modules configuration
-    "custom/logo": {
-	"format": "",
-	"tooltip": false
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    //"modules-left": ["hyprland/workspaces", "sway/mode", "sway/window"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "cpu", "memory", "battery", "network", "custom/powermenu"],
+    "sway/mode": {
+        "format": " {}"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}:{icon}",
-        "format-icons": {
-	    "1":"",
-            "2":"󰈹",
-            "7":"",
-            "8":"",
-            "urgent": "",
-            //"active": "",
-            "default": ""
-        }
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
+        "all-outputs": false,
+        "disable-markup": false,
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "1": "1 <span font='Font Awesome 5 Free 14'></span>",
+            "2": "2 <span font='Font Awesome 5 Free 14'></span>",
+            "3": "3 <span font='Font Awesome 5 Free 14'></span>",
+            "4": "4 <span font='Font Awesome 5 Free 14'></span>",
+            "5": "5 <span font='Font Awesome 5 Free 14'></span>",
+            "6": "6 <span font='Font Awesome 5 Free 14'></span>",
+            "7": "7 <span font='Font Awesome 5 Free 14'></span>",
+            "8": "8 <span font='Font Awesome 5 Free 14'></span>",
+            "9": "9 <span font='Font Awesome 5 Free 14'></span>",
+            "10": "0 <span font='Font Awesome 5 Free 14'></span>"
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+        "icon-size": 20,
+        "spacing": 8
+    },
+    "sway/window": {
+        "max-length": 60,
+        "tooltip": false
+        // "format": "( {} )"
     },
     "clock": {
-        // "timezone": "America/New_York",
-	"format": "{:%a %d %b %H:%M}",
-	"interval" : 60,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-        "format-alt": "{:%Y-%m-%d}",
-	"calendar": {
-	    "mode" : "year",
-	    "mode-mon-col"  : 3,
-	     "format": {
-		    "months":    "<span color='#C0A36E'><b>{}</b></span>",     // boatYellow2
-  		    "days":      "<span color='#DCD7BA'><b>{}</b></span>",     // sakuraPink
-  		    "weeks":     "<span color='#7AA89F'><b>W{}</b></span>",    // waveAqua2
-  		    "weekdays":  "<span color='#E6C384'><b>{}</b></span>",     // carpYellow
-  		    "today":     "<span color='#98BB6C'><b><u>{}</u></b></span>" // waveRed
-	    }                   
-	},
-	"actions": {
-	    "on-click-right": "mode",
-	    "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-	}
-    },
-    "cpu": {
-        "format": "{usage}% ",
+        "format": "{:%a %d %b - %H:%M}",
         "tooltip": false
     },
+    "cpu": {
+        "interval": 5,
+        "format": "︁ {}%",
+        "max-length": 10
+    },
     "memory": {
-        "format": "{percentage}% ",
-        "tooltip": true,
-	"tooltip-format": "{used}/{total}GiB"
+        "interval": 15,
+        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
+        "tooltip": false
     },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+    "custom/powermenu": {
+        "return-type": "json",
+        "exec": "/home/marco/.config/waybar/modules/powermenu.sh",
+        "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
+        "format-icons": [""],
+        "interval": 3600,
+        "escape": true,
+        "on-click": "/home/marco/.config/wofi/wofi-power.sh"
     },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{percent}% {icon}",
-        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
-    },
+    "custom/recorder": {
+		"format": "!",
+		"return-type": "json",
+		"interval": 3,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder",
+        "tooltip": false,
+        "on-click": "killall -s SIGINT wf-recorder"
+	},
     "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%{time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": " ({H}h{M}m)",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 15,
         "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 25,
+            "critical": 10
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "tooltip": false
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "",
-        "tooltip-format": "{essid} {ipaddr}/{cidr}\n{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format": "{icon}",
+        "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-left",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
+        "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip": false
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+        "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
         },
-        "on-click": "pwvucontrol"
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
     },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-alt": "{icon}",
+        "format-alt-click": "click-left",
+        "format-icons": ["", ""],
+        "on-scroll-up": "light -A 1",
+        "on-scroll-down": "light -U 1"
     },
-    "custom/power": {
-	"format" : "⏻ ",
-		"tooltip": false,
-		"on-click": "wlogout",
-    },
-    "bluetooth": {
-	"format": " {status}",
-	"format-no-controller": "󰂲",
-	"format-connected": " {num_connections}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}{device_battery_percentage}"
-    },
-    "hyprland/language": {
-	"format": "{short}-{shortDescription}",
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 75,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "tooltip": false,
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ]
     }
 }

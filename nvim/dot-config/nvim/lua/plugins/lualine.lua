@@ -4,7 +4,7 @@ return {
     config = function()
 	local config = require('lualine')
 	config.setup({
-	   theme = 'nord'
+	   theme = 'tokyonight'
 	})
     end,
 }
