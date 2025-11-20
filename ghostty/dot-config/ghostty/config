@@ -2,7 +2,7 @@
 # all available config options and their default values.
 
 #General
-theme = TokyoNight
+theme = TokyoNight Night
 background-opacity = 0.9
 font-family = "FiraCode Nerd Font"
 #gtk-custom-css = tab-style.css
