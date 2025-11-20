@@ -27,15 +27,16 @@ window#waybar {
     border: 3px solid rgba(9, 85, 225, 0);
     border-radius: 10px;
     min-width: 33px;
+    background: transparent;
 }
-
 #workspaces button.visible {
     color: #a9b1d6;
 }
 
-#workspaces button.focused {
-    border-top: 3px solid #7aa2f7;
-    border-bottom: 3px solid #7aa2f7;
+#workspaces button.active{
+    border-top: 2px solid #7aa2f7;
+    border-bottom: 2px solid #7aa2f7;
+    border-radius: 6px;
 }
 
 #workspaces button.urgent {
@@ -46,7 +47,8 @@ window#waybar {
 #workspaces button:hover {
     box-shadow: inherit;
     border-color: #bb9af7;
-    color: #bb9af7;
+    background-color: #1a1b26; 
+    color:#bb9af7;
 }
 
 /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */

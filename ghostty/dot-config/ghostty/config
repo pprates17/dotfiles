@@ -12,7 +12,7 @@ gtk-wide-tabs = false
 #Keybinds
 keybind = ctrl+a>t=new_tab
 keybind = ctrl+a>x=close_surface
-keybind = ctrl+a>|=new_split:left
+keybind = ctrl+a>\=new_split:left
 keybind = ctrl+a>-=new_split:down
 
 #Move between splits
