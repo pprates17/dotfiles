@@ -3,9 +3,9 @@
 
 #General
 theme = TokyoNight
-background-opacity = 1
+background-opacity = 0.9
 font-family = "FiraCode Nerd Font"
-gtk-custom-css = tab-style.css
+#gtk-custom-css = tab-style.css
 window-save-state = always
 gtk-wide-tabs = false
 
