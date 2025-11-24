@@ -45,9 +45,9 @@
 	    "mode-mon-col"  : 3,
 	     "format": {
 		    "months":    "<span color='#BB9AF7'><b>{}</b></span>",     // 
-  		    "days":      "<span color='#7AA2F7'><b>{}</b></span>",     // 
+  		    "days":      "<span color='#9AA5CE'><b>{}</b></span>",     // 
   		    "weeks":     "<span color='#7DCFFF'><b>W{}</b></span>",    //
-  		    "weekdays":  "<span color='#E6C384'><b>{}</b></span>",     //
+  		    "weekdays":  "<span color='#7DCFFF'><b>{}</b></span>",     //
   		    "today":     "<span color='#9ECE6A'><b><u>{}</u></b></span>" //
 	    }                   
 	}

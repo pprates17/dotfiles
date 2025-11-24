@@ -17,6 +17,12 @@ window#waybar {
     background: #1a1b26; 
 } 
 
+tooltip {
+    background-color: #1a1b26;
+    opacity: 0.95;
+    text-shadow: none;
+}
+
 #workspaces {
     margin: 0 5px;
 }
