@@ -9,6 +9,12 @@ font-family = "FiraCode Nerd Font"
 window-save-state = always
 gtk-wide-tabs = false
 
+keybind = ctrl+a>d=toggle_window_decorations
+gtk-tabs-location = bottom
+split-divider-color = #7dcfff
+unfocused-split-opacity = 0.85
+#unfocused-split-fill = #414868
+
 #Keybinds
 keybind = ctrl+a>t=new_tab
 keybind = ctrl+a>x=close_surface
@@ -32,5 +38,4 @@ keybind = ctrl+a>z=toggle_split_zoom
 keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
 
-keybind = ctrl+a>d=toggle_window_decorations
-gtk-tabs-location = bottom
+
