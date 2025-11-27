@@ -16,6 +16,7 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldenable = false
 
+-- Allow transparency
 vim.cmd [[
   highlight Normal guibg=none
   highlight NonText guibg=none
@@ -42,6 +43,17 @@ vim.cmd [[
 --vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
 --vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
 --vim.g.smart_splits_debug_mode = true
+--
+--
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+local yazi = Terminal:new({ cmd = "yz", hidden = true, direction = "float" })
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 
 -- LSP config
 vim.api.nvim_create_autocmd('LspAttach', {
