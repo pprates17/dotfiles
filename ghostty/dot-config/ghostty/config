@@ -18,7 +18,7 @@ unfocused-split-opacity = 0.85
 #Keybinds
 keybind = ctrl+a>t=new_tab
 keybind = ctrl+a>x=close_surface
-keybind = ctrl+a>\=new_split:left
+keybind = ctrl+a>\=new_split:right
 keybind = ctrl+a>-=new_split:down
 
 #Move between splits
@@ -37,5 +37,3 @@ keybind = ctrl+a>z=toggle_split_zoom
 #Tabs
 keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
-
-
