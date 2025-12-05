@@ -35,11 +35,8 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # keybindings
-#bindkey -e
 bindkey -v
 bindkey -M viins '^F' autosuggest-accept
-#bindkey '^i' history-search-backward
-#bindkey '^o' history-search-forward
 
 #History
 HISTSIZE=1000
@@ -61,4 +58,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias pacman_clean='sudo pacman -Rns $(pacman -Qdtq)'
+
 fastfetch
