@@ -55,7 +55,14 @@ inputbar {
 message {
     padding: 0;
     border-color: @primary;
-    border: 0px 1px 1px 1px;
+    border: 0px 3px 3px 3px;
+}
+
+textbox {
+    padding: 5px;
+    border-color: @primary;
+    border: 0px 0px 0px 0px;
+    color: @primary;
 }
 
 entry, prompt, case-indicator {

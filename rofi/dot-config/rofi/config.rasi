@@ -1,8 +1,8 @@
 configuration{
-    modi: ["drun", "window", "run"];
+    modi: ["drun", "window"];
     icon-theme: "Papirus-Dark";
     show-icons: true;
-    terminal: "alacritty";
+    terminal: "ghostyy";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -10,12 +10,17 @@ configuration{
     display-drun: " ";
     display-run: " ";
     display-window: " ";
+    display-calc: " ";
     
     //adding vim keybindings
     kb-row-up: "Up,Control+k";
     kb-row-left: "Left,Control+h";
     kb-row-right: "Right,Control+l";
     kb-row-down: "Down,Control+j";
+
+    kb-element-next: "Control+n";
+    kb-element-prev: "Control+p";
+    kb-mode-next: "Tab";
 
     kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
 
