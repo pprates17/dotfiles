@@ -20,8 +20,10 @@ vim.opt.foldenable = false
 vim.cmd [[
   highlight Normal guibg=none
   highlight NonText guibg=none
+  highlight NormalNC guibg=none
   highlight Normal ctermbg=none
   highlight NonText ctermbg=none
+  highlight NormalNC ctermbg=none
 ]]
 
 -- resizing splits
