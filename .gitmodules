@@ -1,0 +1,9 @@
+[submodule "tmux/dot-config/tmux/plugins/tpm"]
+	path = tmux/dot-config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/dot-config/tmux/plugins/tokyo-night-tmux"]
+	path = tmux/dot-config/tmux/plugins/tokyo-night-tmux
+	url = https://git::@github.com/janoamaral/tokyo-night-tmux
+[submodule "tmux/dot-config/tmux/plugins/vim-tmux-navigator"]
+	path = tmux/dot-config/tmux/plugins/vim-tmux-navigator
+	url = https://git::@github.com/christoomey/vim-tmux-navigator
