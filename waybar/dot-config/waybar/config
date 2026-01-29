@@ -2,10 +2,9 @@
     "layer": "top",
     "position": "top",
     "height": 40,
-    //"modules-left": ["hyprland/workspaces", "sway/mode", "sway/window"],
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "cpu", "memory", "battery", "network", "hyprland/language","custom/power"],
+    "modules-right": ["custom/recorder", "tray", "idle_inhibitor", "pulseaudio", "backlight", "temperature", "cpu", "memory", "battery", "network", "hyprland/language","custom/power"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -35,10 +34,9 @@
         // "format": "( {} )"
     },
     "clock": {
-        // "timezone": "America/New_York",
         "format": "{:%a %d %b - %H:%M}",
 	"interval" : 60,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%Y-%m-%d}",
 	"calendar": {
 	    "mode" : "year",
@@ -50,7 +48,12 @@
   		    "weekdays":  "<span color='#7DCFFF'><b>{}</b></span>",     //
   		    "today":     "<span color='#9ECE6A'><b><u>{}</u></b></span>" //
 	    }                   
+	},
+	"actions": { 
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down",
 	}
+	    
     },
     "cpu": {
         "interval": 5,
@@ -59,7 +62,7 @@
     },
     "memory": {
         "interval": 15,
-        "format": "<span font='Font Awesome 5 Free 9'>  </span> {used:0.1f}G/{total:0.1f}G",
+        "format": "<span font='Font Awesome 5 Free 9'> </span> {used:0.1f}G/{total:0.1f}G",
         "tooltip": false
     },
     "custom/power": {
@@ -91,7 +94,7 @@
     },
     "network": {
         "format": "{icon}",
-        "format-alt": "<span font='Font Awesome 5 Free 10'>󰩟 </span> ︁{ipaddr}/{cidr} {icon}",
+        "format-alt": "<span font='Font Awesome 5 Free 10'>󰩠 </span> ︁{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-left",
         "format-wifi": "<span font='Font Awesome 5 Free 10'> </span> {essid} ({signalStrength}%)",
         "format-ethernet": "<span font='Font Awesome 5 Free 10'>󰈀 </span> {ifname}",
@@ -102,14 +105,15 @@
         "format": "<span font='Font Awesome 5 Free 11'>{icon:2} </span>{volume}%",
         "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2} </span>{volume}%",
         "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'> </span>",
+        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
         "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "headphone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
+            "phone": [" ", "  ", "  ", "  "],
+            "headphone": [" ", "  ", "  ", "  "],
+            "headset": [" ", "  ", "  ", "  "],
+            "default": ["", " ", " ", " "]
         },
         "scroll-step": 2,
-        "on-click": "pwvucontrol",
+        "on-click": "ghostty -e wiremix",
         "tooltip": false
     },
     "backlight": {
@@ -136,5 +140,12 @@
     },
     "hyprland/language": {
 	"format": "{short}-{shortDescription}",
+    },
+    "idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+	    "activated": "󰈈",
+	    "deactivated": "󰈉",
+	}
     }
 }

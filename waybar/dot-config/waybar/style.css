@@ -124,6 +124,15 @@ tooltip {
     color: rgba(238, 46, 36, 1);
 }
 
+#idle_inhibitor {
+    margin: 4px 7px 0px 7px;
+}
+
+#idle_inhibitor.activated {
+    color: #bb9af7;
+}
+
+
 @keyframes blink {
     to {
         background-color: #ffffff;
