@@ -4,7 +4,7 @@ return {
     config = function ()
 	local configs = require("nvim-treesitter.configs")
 	configs.setup({
-	    ensure_installed = { "c", "lua","css","jsonc" },
+	    ensure_installed = { "c", "lua","css","jsonc","markdown" },
             highlight = { enable = true },
 	    indent = { enable = true },
 	    incremental_selection = {
