@@ -60,4 +60,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias pacman_clean='sudo pacman -Rns $(pacman -Qdtq)'
 
+export GOPATH=$HOME/Workspaces/go
+export PATH=$PATH:$GOPATH/bin >> ~/.zshrc
+
 fastfetch
